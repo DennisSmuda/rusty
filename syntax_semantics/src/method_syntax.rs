@@ -49,3 +49,29 @@ fn main() {
     let d = c.grow(2.0).area(); // Chaining happens here
     println!("{}", d);
 }
+
+
+
+/**
+ * Associated Functions
+ *  - 'static methods'
+ */
+struct Circle {
+    x: f64,
+    y: f64,
+    radius: f64,
+}
+
+impl Circle {
+    fn new(x: f64, y: f64, radius: f64) -> Circle {
+        Circle {
+            x: x,
+            y: y,
+            radius: radius,
+        }
+    }
+}
+
+fn main() {
+    let c = Circle::new(0.0, 0.0, 2.0);
+}
